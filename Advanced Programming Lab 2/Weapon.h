@@ -1,20 +1,19 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Weapon
 {
 private:
-	//void setAbilitiesArraySize(int i);
-	//void setAbilitiesArrayElement(int index, string s);
 	friend class CharacterClass;
 	friend class Devil;
 protected:
 	string name;
 	string description;
 	int damage;
-	//string* abilities; //dynamic array
+	vector<string> abilities;
 	
 public:
 	//constructors
@@ -25,12 +24,13 @@ public:
 	void setName(string n);
 	void setDescription(string d);
 	void setDamage(int d);
-	//void fillAbilitiesArray(string abilitiesArray[], int i);
+	void setWeaponAbility(string s);//adds an ability to the end of the vector
 
 	//getter functions
 	string getName();
 	string getDescription();
 	int getDamage();
+	string getWeaponAbilityGivenIndex(int i);
 
 	friend ostream& operator<<(ostream& output, Weapon& W)
 	{

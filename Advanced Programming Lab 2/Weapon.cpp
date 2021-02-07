@@ -15,12 +15,6 @@ Weapon::Weapon(string n, string d, int i)
 	damage = i;
 }
 
-
-//void Weapon::setAbilitiesArraySize(int i)
-//{
-
-//}
-
 void Weapon::setName(string n)
 {
 	name = n;
@@ -34,6 +28,11 @@ void Weapon::setDescription(string d)
 void Weapon::setDamage(int d)
 {
 	damage = d;
+}
+
+void Weapon::setWeaponAbility(string s)
+{
+	abilities.push_back(s);
 }
 
 string Weapon::getName()
