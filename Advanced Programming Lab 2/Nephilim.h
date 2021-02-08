@@ -5,7 +5,6 @@ class Nephilim : public CharacterClass
 {
 private:
 	int damageResistance = 20; //percentile value
-	string specialAbility = "Etheric Armour: Permanent 20% damage resistance, calculated before armour (NOTE: armour is not implemented yet)";
 public:
 	Nephilim();//default constructor
 	Nephilim(string n, int h, Weapon* w);//constructor that sets all parameters manually, using a preset Weapon object

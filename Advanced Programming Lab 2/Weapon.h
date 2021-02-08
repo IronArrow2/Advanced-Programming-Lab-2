@@ -32,13 +32,13 @@ public:
 	string getDescription();
 	int getDamage();
 	string getWeaponAbilityGivenIndex(int i);
-	string displayEntireAbilityVector();
+	void displayEntireAbilityVector();
 	vector<string> getEntireAbilityVector();
 
 
 	friend ostream& operator<<(ostream& output, Weapon& W)
 	{
-		output << "Name: " << W.getName() << " Damage:  " << W.getDamage() << " Description: " << W.getDescription();
+		output << "Name: " << W.getName() << " \nDamage:  " << W.getDamage() << " \nDescription: " << W.getDescription();
 		return output;
 	}
 };

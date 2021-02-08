@@ -5,6 +5,7 @@ Nephilim::Nephilim()
 	name = "";
 	health = 0;
 	characterWeapon = new Weapon();
+	specialAbility = "Etheric Armour: Permanent 20% damage resistance, calculated before armour (NOTE: armour is not implemented yet)";
 }
 
 Nephilim::Nephilim(string n, int h, Weapon* w)
@@ -12,6 +13,7 @@ Nephilim::Nephilim(string n, int h, Weapon* w)
 	name = n;
 	health = h;
 	characterWeapon = w;
+	specialAbility = "Etheric Armour: Permanent 20% damage resistance, calculated before armour (NOTE: armour is not implemented yet)";
 }
 
 Nephilim::Nephilim(string n, Weapon* w)
@@ -19,6 +21,7 @@ Nephilim::Nephilim(string n, Weapon* w)
 	name = n;
 	health = 700;
 	characterWeapon = w;
+	specialAbility = "Etheric Armour: Permanent 20% damage resistance, calculated before armour (NOTE: armour is not implemented yet)";
 }
 
 Nephilim::Nephilim(string n, string weaponName, string weaponDescription, int weaponDamage)
@@ -26,6 +29,7 @@ Nephilim::Nephilim(string n, string weaponName, string weaponDescription, int we
 	name = n;
 	health = 700;
 	characterWeapon = new Weapon(weaponName, weaponDescription, weaponDamage);
+	specialAbility = "Etheric Armour: Permanent 20% damage resistance, calculated before armour (NOTE: armour is not implemented yet)";
 }
 
 void Nephilim::setName(string s)
@@ -65,5 +69,5 @@ Weapon* Nephilim::getCharacterWeapon()
 
 void Nephilim::DisplayInfo()
 {
-	std::cout << "Name: " << name << " Max Health: " << health << " Weapon Info: " << *characterWeapon << " Special Ability: " << specialAbility;
+	std::cout << "Name: " << name << " \nMax Health: " << health << " \nWeapon Info: " << *characterWeapon << " \nSpecial Ability: " << specialAbility;
 }

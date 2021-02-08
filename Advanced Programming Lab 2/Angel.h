@@ -7,7 +7,6 @@ class Angel : public CharacterClass
 private:
 	int mana;
 	int healthRegenRate = 2;
-	string specialAbility = "Divine Health: Massive base health and innate health regeneration.";
 public:
 	Angel();//default constructor
 	Angel(string n, int h, Weapon* w, int m);//constructor that sets all parameters manually, using a preset Weapon object

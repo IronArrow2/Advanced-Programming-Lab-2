@@ -6,6 +6,7 @@ Angel::Angel()
 	health = 0;
 	characterWeapon = new Weapon();
 	mana = 0;
+	specialAbility = "Divine Health: Massive base health and innate health regeneration.";
 }
 
 Angel::Angel(string n, int h, Weapon* w, int m)
@@ -14,6 +15,7 @@ Angel::Angel(string n, int h, Weapon* w, int m)
 	health = h;
 	characterWeapon = w;
 	mana = m;
+	specialAbility = "Divine Health: Massive base health and innate health regeneration.";
 }
 
 Angel::Angel(string n, Weapon* w)
@@ -22,6 +24,7 @@ Angel::Angel(string n, Weapon* w)
 	health = 1000;
 	characterWeapon = w;
 	mana = 150;
+	specialAbility = "Divine Health: Massive base health and innate health regeneration.";
 }
 
 Angel::Angel(string n, string weaponName, string weaponDescription, int weaponDamage)
@@ -30,6 +33,7 @@ Angel::Angel(string n, string weaponName, string weaponDescription, int weaponDa
 	health = 1000;
 	mana = 150;
 	characterWeapon = new Weapon(weaponName, weaponDescription, weaponDamage);
+	specialAbility = "Divine Health: Massive base health and innate health regeneration.";
 }
 
 void Angel::setName(string s)
@@ -74,5 +78,5 @@ Weapon* Angel::getCharacterWeapon()
 
 void Angel::DisplayInfo()
 {
-	std::cout << "Name: " << name << " Max Health: " << health << " Weapon Info: " << *characterWeapon << " Max Mana: " << mana << " Special Ability: " << specialAbility;
+	std::cout << "Name: " << name << " \nMax Health: " << health << " \nWeapon Info: " << *characterWeapon << " \nMax Mana: " << mana << " \nSpecial Ability: " << specialAbility;
 }

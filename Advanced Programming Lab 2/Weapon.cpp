@@ -63,7 +63,7 @@ string Weapon::getWeaponAbilityGivenIndex(int i)
 	return abilities[i];
 }
 
-string Weapon::displayEntireAbilityVector()
+void Weapon::displayEntireAbilityVector()
 {
 	for (int i = 0; i < abilities.size(); i++)
 	{
