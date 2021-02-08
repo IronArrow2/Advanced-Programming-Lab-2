@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Angel.cpp" />
-    <ClCompile Include="CharacterClass.cpp" />
     <ClCompile Include="Devil.cpp" />
     <ClCompile Include="Nephilim.cpp" />
     <ClCompile Include="main.cpp" />
