@@ -5,6 +5,7 @@ class Devil : public CharacterClass
 {
 private:
 	int mana;
+	string specialAbility = "Infernal Might: Your weapon damage is doubled.";
 public:
 	Devil();//default constructor
 	Devil(string n, int h, Weapon* w, int m);//constructor that sets all parameters manually, using a preset Weapon object

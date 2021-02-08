@@ -14,6 +14,7 @@ Devil::Devil(string n, int h, Weapon* w, int m)
 	health = h;
 	characterWeapon = w;
 	mana = m;
+	characterWeapon->setDamage(characterWeapon->getDamage() * 2);
 }
 
 Devil::Devil(string n, Weapon* w)
@@ -22,6 +23,7 @@ Devil::Devil(string n, Weapon* w)
 	health = 666;
 	characterWeapon = w;
 	mana = 100;
+	characterWeapon->setDamage(characterWeapon->getDamage() * 2);
 }
 
 Devil::Devil(string n, string weaponName, string weaponDescription, int weaponDamage)
@@ -30,6 +32,7 @@ Devil::Devil(string n, string weaponName, string weaponDescription, int weaponDa
 	health = 666;
 	mana = 100;
 	characterWeapon = new Weapon(weaponName, weaponDescription, weaponDamage);
+	characterWeapon->setDamage(characterWeapon->getDamage() * 2);
 }
 
 void Devil::setName(string s)
@@ -50,11 +53,13 @@ void Devil::setMana(int m)
 void Devil::setCharacterWeapon(Weapon* w)
 {
 	characterWeapon = w;
+	characterWeapon->setDamage(characterWeapon->getDamage() * 2);
 }
 
 void Devil::setCharacterWeapon(string name, string description, int damage)
 {
 	characterWeapon = new Weapon(name, description, damage);
+	characterWeapon->setDamage(characterWeapon->getDamage() * 2);
 }
 
 string Devil::getName()
@@ -79,5 +84,5 @@ Weapon* Devil::getCharacterWeapon()
 
 void Devil::DisplayInfo()
 {
-	std::cout << "Name: " << name << " Max Health: " << health << " Weapon Info: " << *characterWeapon << " Max Mana: " << mana;
+	std::cout << "Name: " << name << " Max Health: " << health << " Weapon Info: " << *characterWeapon << " Max Mana: " << mana << " Special Ability: " << specialAbility;
 }
