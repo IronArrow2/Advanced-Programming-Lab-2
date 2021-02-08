@@ -10,17 +10,15 @@
 #include "Weapon.h"
 using namespace std;
 
-/*To do:
-*Get menu set up in main (current code in there is just for testing)
-*Allow creation of multiple characters in menu using a vector*/
-
 int main()
 {
 	bool exitLoop = false;
 	bool exitInnerLoop = false;
 	string input, characterName, weaponName, weaponDescription, characterClass;
 	int weaponDamage, inputNum;
+	int x = 1;
 	Weapon playerWeapon;
+	vector<string> tempWeaponAbilities;
 	vector<CharacterClass*> characterVector;
 	vector<CharacterClass*>::iterator it;
 
@@ -64,21 +62,52 @@ int main()
 			weaponDamage = stoi(input);
 			cout << '\n';
 
+			cout << "Type 'exit' to leave loop.\n";
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');//flush remaining nextline character out of the stream
+			cin.clear();
+			while (exitInnerLoop == false)
+			{
+				cout << "Weapon Ability " << x << ": ";
+				getline(cin, input);
+				if (input == "exit")
+				{
+					exitInnerLoop = true;
+				}
+				else
+				{
+					tempWeaponAbilities.push_back(input);
+					x++;
+				}
+			}
+			exitInnerLoop = false;
+
 			if (characterClass == "Angel")
 			{
 				Angel* playerCharacter = new Angel(characterName, weaponName, weaponDescription, weaponDamage);
+				for (string s : tempWeaponAbilities)
+				{
+					playerCharacter->getCharacterWeapon()->addWeaponAbility(s);
+				}
 				characterVector.push_back(playerCharacter);
 				//playerCharacter->DisplayInfo();
 			}
 			else if (characterClass == "Devil")
 			{
 				Devil* playerCharacter = new Devil(characterName, weaponName, weaponDescription, weaponDamage);
+				for (string s : tempWeaponAbilities)
+				{
+					playerCharacter->getCharacterWeapon()->addWeaponAbility(s);
+				}
 				characterVector.push_back(playerCharacter);
 				//playerCharacter->DisplayInfo();
 			}
 			else if (characterClass == "Nephilim")
 			{
 				Nephilim* playerCharacter = new Nephilim(characterName, weaponName, weaponDescription, weaponDamage);
+				for (string s : tempWeaponAbilities)
+				{
+					playerCharacter->getCharacterWeapon()->addWeaponAbility(s);
+				}
 				characterVector.push_back(playerCharacter);
 				//playerCharacter->DisplayInfo();
 			}

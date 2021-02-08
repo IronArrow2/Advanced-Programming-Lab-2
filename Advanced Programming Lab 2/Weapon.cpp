@@ -71,6 +71,15 @@ void Weapon::displayEntireAbilityVector()
 	}
 }
 
+string Weapon::displayEntireAbilityVector(string s)
+{//s should be blank string
+	for (int i = 0; i < abilities.size(); i++)
+	{
+		s = s + abilities[i] + " ";
+	}
+	return s;
+}
+
 vector<string> Weapon::getEntireAbilityVector()
 {
 	return abilities;
