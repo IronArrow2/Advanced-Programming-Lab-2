@@ -1,11 +1,17 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include <ios> //used to get stream size
 #include <limits> //used to get numeric limits
 #include "CharacterClass.h"
 #include "Devil.h"
 #include "Weapon.h"
 using namespace std;
+
+/*To do:
+*Finish Angel, Devil and Nephilim classes, including special abilities for all three
+*Get menu set up in main (current code in there is just for testing)
+*Allow creation of multiple characters in menu using a vector*/
 
 int main()
 {

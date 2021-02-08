@@ -30,9 +30,17 @@ void Weapon::setDamage(int d)
 	damage = d;
 }
 
-void Weapon::setWeaponAbility(string s)
+void Weapon::addWeaponAbility(string s)
 {
 	abilities.push_back(s);
+}
+
+void Weapon::setAbilityVector(vector<string> s)
+{
+	for (int i = 0; i < s.size(); i++)
+	{
+		abilities[i] = s[i];
+	}
 }
 
 string Weapon::getName()
@@ -48,5 +56,23 @@ string Weapon::getDescription()
 int Weapon::getDamage()
 {
 	return damage;
+}
+
+string Weapon::getWeaponAbilityGivenIndex(int i)
+{
+	return abilities[i];
+}
+
+string Weapon::displayEntireAbilityVector()
+{
+	for (int i = 0; i < abilities.size(); i++)
+	{
+		cout << "Ability " << i << ": " << abilities[i];
+	}
+}
+
+vector<string> Weapon::getEntireAbilityVector()
+{
+	return abilities;
 }
 

@@ -24,13 +24,17 @@ public:
 	void setName(string n);
 	void setDescription(string d);
 	void setDamage(int d);
-	void setWeaponAbility(string s);//adds an ability to the end of the vector
+	void addWeaponAbility(string s);//adds an ability to the end of the vector
+	void setAbilityVector(vector<string> s);
 
 	//getter functions
 	string getName();
 	string getDescription();
 	int getDamage();
 	string getWeaponAbilityGivenIndex(int i);
+	string displayEntireAbilityVector();
+	vector<string> getEntireAbilityVector();
+
 
 	friend ostream& operator<<(ostream& output, Weapon& W)
 	{

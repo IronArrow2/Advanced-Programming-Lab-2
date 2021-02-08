@@ -30,7 +30,7 @@
     <ClCompile Include="Angel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Human.cpp">
+    <ClCompile Include="Nephilim.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,7 +47,7 @@
     <ClInclude Include="Angel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Human.h">
+    <ClInclude Include="Nephilim.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
